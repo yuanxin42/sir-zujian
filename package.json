@@ -5,10 +5,10 @@
   "author": "原鑫 <1017123610@qq.com>",
   "license": "MIT",
   "private": false,
-  "main": "dist/sir.js", //import引入时默认寻找的文件
-  "repository": { //仓库地址
+  "main": "dist/sir.js",
+  "repository": {
     "type": "git",
-    "url": "https://github.com/leichangchun/vue-area-select"
+    "url": "https://github.com/yuanxin666/sir-zujian.git"
   },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
