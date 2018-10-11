@@ -2,14 +2,11 @@ var path = require('path')
 var webpack = require('webpack')
 
 module.exports = {
-  entry: './src/components/index.js',
+  entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'sir.js',  //打包生成文件的名字
-    library:'AreaSelect',   //reqire引入的名字
-    libraryTarget:'umd',
-    umdNamedDefine:true
+    filename: 'build.js',  //打包生成文件的名字
   },
   module: {
     rules: [

@@ -22,7 +22,6 @@ export default {
         }
     },
     created() {
-        s
     }
 }
 </script>
