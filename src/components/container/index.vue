@@ -17,7 +17,6 @@ export default {
     mounted() {
         this.$children.forEach((vm) => {
             if (vm.$options.name === 'sir-header'||vm.$options.name === 'sir-footer') {
-                // alert(111)
                 this.isheaderorfooter = true
             }
         })

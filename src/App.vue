@@ -15,13 +15,60 @@
       </div>
     </sir-card>
     <sir-container>
-      <sir-aside :width='100'>12121212awsadsa</sir-aside>
+      <sir-header>Header</sir-header>
+      <sir-main>Main</sir-main>
+    </sir-container>
+    <sir-container>
+      <sir-header>Header</sir-header>
+      <sir-main>Main</sir-main>
+      <sir-footer>Footer</sir-footer>
+    </sir-container>
+    <sir-container>
+      <sir-aside width="200px">Aside</sir-aside>
+      <sir-main>Main</sir-main>
+    </sir-container>
+    <sir-container>
+      <sir-header>Header</sir-header>
       <sir-container>
-        <sir-footer>121212</sir-footer>
-        <sir-header>121212</sir-header>
-        <sir-main>121212</sir-main>
+        <sir-aside width="200px">Aside</sir-aside>
+        <sir-main>Main</sir-main>
       </sir-container>
     </sir-container>
+    <sir-container>
+      <sir-header>Header</sir-header>
+      <sir-container>
+        <sir-aside width="200px">Aside</sir-aside>
+        <sir-container>
+          <sir-main>Main</sir-main>
+          <sir-footer>Footer</sir-footer>
+        </sir-container>
+      </sir-container>
+    </sir-container>
+
+    <sir-container>
+      <sir-aside width="200px">Aside</sir-aside>
+      <sir-container>
+        <sir-header>Header</sir-header>
+        <sir-main>Main</sir-main>
+      </sir-container>
+    </sir-container>
+
+    <sir-container>
+      <sir-aside width="200px">Aside</sir-aside>
+      <sir-container>
+        <sir-header>Header</sir-header>
+        <sir-main>Main</sir-main>
+        <sir-footer>Footer</sir-footer>
+      </sir-container>
+    </sir-container>
+    <!-- <sir-container>
+        <sir-aside width="100px">12121212awsadsa</sir-aside>
+        <sir-container>
+          <sir-header>121212</sir-header>
+          <sir-main>121212</sir-main>
+          <sir-footer>121212</sir-footer>
+        </sir-container>
+      </sir-container> -->
   </div>
 </template>
 

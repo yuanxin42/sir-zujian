@@ -19,6 +19,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .main {
+    padding: 20px;
     background: blue;
     width: 100%;
 }
