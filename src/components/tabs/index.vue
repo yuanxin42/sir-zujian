@@ -1,6 +1,5 @@
 <template>
     <div class="tabs" :style="tabstyle">
-        {{tablist}}
         <ul class="nav">
             <li v-for="(val,index) in tablist" :key="index" @click="changetab(val.name)">{{val.label}}</li>
         </ul>
