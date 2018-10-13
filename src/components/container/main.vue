@@ -1,5 +1,5 @@
 <template>
-    <div class="main" :style="{width:width+'px',height:height+'px'}">
+    <div class="main" :style="{width:width,height:height}">
         <slot></slot>
     </div>
 </template>

@@ -5,6 +5,8 @@ import aside from './container/aside'
 import footer from './container/footer'
 import header from './container/header'
 import main from './container/main'
+import tabs from './tabs/index'
+import tab from './tabs/tab'
 export default {
   install: (Vue) => {
     Vue.component('sir-zj', zj)
@@ -14,5 +16,7 @@ export default {
     Vue.component('sir-footer', footer)
     Vue.component('sir-header', header)
     Vue.component('sir-main', main)
+    Vue.component('sir-tabs', tabs)
+    Vue.component('sir-tab', tab)
   }
 }

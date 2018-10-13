@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :style="{width:width+'px',height:height+'px'}">
+    <div class="card" :style="{width:width,height:height}">
         <div class="cardBlockHeader">
             <slot name="cardHeader"></slot>
         </div>
@@ -12,7 +12,7 @@
 export default {
     props: {
         width: {
-            default: '290',
+            default: '290px',
             type: String | Number
         },
         height: String | Number

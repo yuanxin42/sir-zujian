@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <sir-zj></sir-zj>
-    <sir-card :width='400'>
+    <sir-card width='400px'>
       <div slot="cardHeader">
         <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
       </div>
@@ -69,6 +69,12 @@
           <sir-footer>121212</sir-footer>
         </sir-container>
       </sir-container> -->
+      <sir-tabs>
+        21321312
+        <sir-tab label="用户管理" name="first1">我是tab11</sir-tab>
+        <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
+        <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
+      </sir-tabs>
   </div>
 </template>
 
