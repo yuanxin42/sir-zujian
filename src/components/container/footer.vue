@@ -23,7 +23,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .footer {
-    background: purple;
+    background: #b3c0d1;
     width: 100%;
     padding-left: 20px;
 }

@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .aside {
-    background: orange;
+    background: #d3dce6;
     width: 100%;
 }
 </style>

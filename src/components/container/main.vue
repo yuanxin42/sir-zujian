@@ -20,7 +20,7 @@ export default {
 <style lang="less" scoped>
 .main {
     padding: 20px;
-    background: blue;
+    background: #e9eef3;
     width: 100%;
 }
 </style>
