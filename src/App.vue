@@ -70,8 +70,8 @@
         </sir-container>
       </sir-container> -->
       <sir-tabs>
-        21321312
-        <sir-tab label="用户管理" name="first1">我是tab11</sir-tab>
+        <!-- 21321312 -->
+        <sir-tab label="用户管理阿斯顿撒打算" name="first1">我是tab11</sir-tab>
         <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
         <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
       </sir-tabs>
