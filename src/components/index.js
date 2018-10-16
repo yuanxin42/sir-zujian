@@ -7,6 +7,8 @@ import header from './container/header'
 import main from './container/main'
 import tabs from './tabs/index'
 import tab from './tabs/tab'
+import carousel from './carousel/index'
+
 export default {
   install: (Vue) => {
     Vue.component('sir-zj', zj)
@@ -18,5 +20,6 @@ export default {
     Vue.component('sir-main', main)
     Vue.component('sir-tabs', tabs)
     Vue.component('sir-tab', tab)
+    Vue.component('sir-carousel', carousel)
   }
 }

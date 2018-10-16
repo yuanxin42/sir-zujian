@@ -75,6 +75,7 @@ export default {
         padding-bottom: 10px;
         li {
             font-size: 14px;
+            margin: 0 10px;
             padding-bottom: 10px;
             margin: 0 20px -11px 0;
             cursor: pointer;

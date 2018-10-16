@@ -75,6 +75,10 @@
         <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
         <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
       </sir-tabs>
+      <div style="width:700px">
+        <sir-carousel></sir-carousel>
+      </div>
+      
   </div>
 </template>
 
