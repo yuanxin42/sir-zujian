@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <sir-zj></sir-zj>
-    <sir-card width='400px'>
+    <!-- <sir-card width='400px'>
       <div slot="cardHeader">
         <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
       </div>
@@ -60,7 +60,7 @@
         <sir-main>Main</sir-main>
         <sir-footer>Footer</sir-footer>
       </sir-container>
-    </sir-container>
+    </sir-container> -->
     <!-- <sir-container>
         <sir-aside width="100px">12121212awsadsa</sir-aside>
         <sir-container>
@@ -69,15 +69,16 @@
           <sir-footer>121212</sir-footer>
         </sir-container>
       </sir-container> -->
-      <sir-tabs>
+      <sir-tabs tabPosition='left'>
         <!-- 21321312 -->
         <sir-tab label="用户管理阿斯顿撒打算" name="first1">我是tab11</sir-tab>
         <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
         <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
       </sir-tabs>
-      <div style="width:700px">
+      <!-- <div style="width:700px">
         <sir-carousel></sir-carousel>
-      </div>
+      </div> -->
+      <sir-scrolltop></sir-scrolltop>
       
   </div>
 </template>

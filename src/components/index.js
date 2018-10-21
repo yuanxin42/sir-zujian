@@ -8,6 +8,7 @@ import main from './container/main'
 import tabs from './tabs/index'
 import tab from './tabs/tab'
 import carousel from './carousel/index'
+import scrolltop from './scrolltop/index'
 
 export default {
   install: (Vue) => {
@@ -21,5 +22,6 @@ export default {
     Vue.component('sir-tabs', tabs)
     Vue.component('sir-tab', tab)
     Vue.component('sir-carousel', carousel)
+    Vue.component('sir-scrolltop', scrolltop)
   }
 }
