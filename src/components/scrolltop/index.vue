@@ -1,7 +1,7 @@
 <template>
     <div :class="{scroll:true,scrolldown:isdown}">
         <a :href="sirSrc" class="scrollA">
-            <img class="scrollPic" src="../../assets/image/scroll.png" alt="">
+            <img class="scrollPic" :src="scrollImg" alt="">
         </a>
     </div>
 </template>
@@ -19,7 +19,7 @@ export default {
             type: String
         },
         scrollImg: {
-            default: '../../assets/image/scroll.png',
+            default: 'https://cdn.jsdelivr.net/gh/moezx/cdn@3.1.9/img/Sakura/images/scroll.png',
             type: String
         }
     },
