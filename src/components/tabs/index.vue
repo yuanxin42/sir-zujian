@@ -1,7 +1,7 @@
 <template>
     <div :class="{tabs:true,tableft:tabPosition==='left'}" :style="tabstyle">
         <ul :class="{nav:true,navleft:tabPosition==='left'}">
-            <li :class="{navchose:tabname===val.name}" v-for="(val,index) in tablist" :key="index" @click="changetab(val.name)">{{val.label}}</li>
+            <li :style="{width:labelwidth}" :class="{sirli:true,navchose:tabname===val.name}" v-for="(val,index) in tablist" :key="index" @click="changetab(val.name)">{{val.label}}</li>
         </ul>
         <div class="contain">
             <slot></slot>
@@ -20,7 +20,8 @@ export default {
         tabPosition: {
             default: 'top',
             type: String
-        }
+        },
+        labelwidth: String,
     },
     computed: {
         tabstyle() {
@@ -73,9 +74,10 @@ export default {
         width: 100%;
         border-bottom: 1px solid #ccc;
         padding-bottom: 10px;
-        li {
+        .sirli {
             font-size: 14px;
             margin: 0 10px;
+            text-align: center;
             padding-bottom: 10px;
             margin: 0 20px -11px 0;
             cursor: pointer;
@@ -99,17 +101,17 @@ export default {
         flex-direction: column;
         border-bottom: 0;
         border-right: 1px solid #ccc;
-        li{
+        .sirli{
             width: auto;
             margin: 0px 0 10px 0;
-            padding: 5px 10px 5px 10px;
+            padding: 10px 10px 0px 10px;
             white-space:nowrap;
             padding-right: 10px;
         }
         .navchose{
             border-bottom: 0px;
             margin-right: -1px;
-            padding-right: 9px;
+            padding-right: 29px;
             border-right: 2px solid #409eff;
         }
     }

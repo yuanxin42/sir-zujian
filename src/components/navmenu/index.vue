@@ -1,5 +1,5 @@
 <template>
-    <div class="navment" :style="{width:width,height:height,lineHeight:height}">
+    <div :class="{navment:true,sirTop:sirTop}" :style="{width:width,height:height,lineHeight:height}">
         <div class="navtop">
             <slot name="navtop"></slot>
         </div>
@@ -19,9 +19,21 @@ export default {
     },
     data() {
         return {
+            sirTop: false
+        }
+    },
+    methods: {
+        handleScroll() {
+            let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
+            if (scroll > 50) {
+                this.sirTop = true;
+            } else {
+                this.sirTop = false;
+            }
         }
     },
     created() {
+        window.addEventListener('scroll', this.handleScroll)
     }
 }
 </script>
@@ -31,7 +43,7 @@ export default {
     top: 0;
     width: 100%;
     transition: all 0.5s ease;
-    &:hover{
+    &:hover {
         background: #fff;
     }
     .navtop {
@@ -48,5 +60,8 @@ export default {
         margin-right: 20px;
         float: right;
     }
+}
+.sirTop{
+    background: #fff;
 }
 </style>
