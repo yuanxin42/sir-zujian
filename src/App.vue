@@ -15,6 +15,14 @@
         </div>
       </div>
     </sir-card>
+    </br>
+    <div class="demo">
+        <sir-codecard>
+          <div slot="cardHeader">1232131</div>
+          <div slot="cardFotter">
+          </div>
+        </sir-codecard>
+    </div>
     <!--   <sir-container>
                       <sir-header>Header</sir-header>
                       <sir-main>Main</sir-main>
@@ -70,15 +78,15 @@
                           <sir-footer>121212</sir-footer>
                         </sir-container>
                       </sir-container> -->
-    <sir-tabs tabPosition='left' labelwidth='200px'>
+    <!-- <sir-tabs tabPosition='left' labelwidth='200px'>
       <sir-tab label="用户管理阿斯顿撒打算" name="first1">我是tab11</sir-tab>
       <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
       <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
-    </sir-tabs>
+    </sir-tabs> -->
     <!-- <div style="width:700px">
                         <sir-carousel></sir-carousel>
                       </div> -->
-    <sir-scrolltop></sir-scrolltop>
+    <!-- <sir-scrolltop></sir-scrolltop>
     <sir-navmenu>
       <div slot="navtop">
         <a class="navTopBlock" href="https://www.baidu.com" alt="樱花庄的白猫">
@@ -89,7 +97,7 @@
         <sir-submenu>222</sir-submenu>
         111 222
       </div>
-    </sir-navmenu>
+    </sir-navmenu> -->
     <!-- <span class="sakurasono"> さくら
                           <ruby style="ruby-position:over;">荘
                             <rp></rp>
@@ -125,6 +133,11 @@ export default {
 <style>
 #app {
   height: 2000px;
-  background: powderblue;
+  /* background: powderblue; */
+}
+.demo{
+  width: 700px;
+  height: 400px;
+   /* background: red;  */
 }
 </style>

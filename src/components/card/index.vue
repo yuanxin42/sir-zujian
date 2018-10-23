@@ -12,7 +12,7 @@
 export default {
     props: {
         width: {
-            default: '290px',
+            default: '100%',
             type: String | Number
         },
         height: String | Number
@@ -29,6 +29,7 @@ export default {
 @import "../../assets/css/common.less";
 .card {
     border: 1px solid #e5e5e5;
+    overflow: hidden;
     .cardBlockHeader {
         overflow: hidden;
         width: 100%;

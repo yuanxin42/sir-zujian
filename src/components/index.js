@@ -11,6 +11,7 @@ import carousel from './carousel/index'
 import scrolltop from './scrolltop/index'
 import navmenu from './navmenu/index'
 import submenu from './navmenu/submenu'
+import codecard from './codecard/index'
 
 export default {
   install: (Vue) => {
@@ -27,7 +28,6 @@ export default {
     Vue.component('sir-scrolltop', scrolltop)
     Vue.component('sir-navmenu', navmenu)
     Vue.component('sir-submenu', submenu)
-    
-    
+    Vue.component('sir-codecard', codecard)  
   }
 }
