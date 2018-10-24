@@ -8,7 +8,7 @@ export default {
     name: 'sir-tab',
     props: {
         width: {
-            default: '290px',
+            default: '100%',
             type: String | Number
         },
         height: String | Number,

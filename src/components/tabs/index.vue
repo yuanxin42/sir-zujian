@@ -78,7 +78,7 @@ export default {
             font-size: 14px;
             margin: 0 10px;
             text-align: center;
-            padding-bottom: 10px;
+            padding: 10px 0 10px 0;
             margin: 0 20px -11px 0;
             cursor: pointer;
         }
