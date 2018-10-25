@@ -1,6 +1,16 @@
 <template>
   <div id="app">
     <sir-zj></sir-zj>
+    <sir-navmenu>
+      <div slot="navtop">
+        123123
+      </div>
+      <div slot="allsubmenu">
+        <sir-submenu>123</sir-submenu>
+        <sir-submenu>123</sir-submenu>
+        <sir-submenu>123</sir-submenu>
+      </div>
+    </sir-navmenu>
     <sir-card width='400px'>
       <div slot="cardHeader">
         <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">

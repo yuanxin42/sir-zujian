@@ -25,7 +25,7 @@ export default {
     methods: {
         handleScroll() {
             let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-            if (scroll > 50) {
+            if (scroll > 0) {
                 this.sirTop = true;
             } else {
                 this.sirTop = false;
