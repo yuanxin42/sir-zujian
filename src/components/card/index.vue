@@ -1,5 +1,5 @@
 <template>
-    <div class="card" :style="{width:width,height:height}">
+    <div :class="sirClass" :style="sirStyle">
         <div class="cardBlockHeader">
             <slot name="cardHeader"></slot>
         </div>
@@ -15,10 +15,28 @@ export default {
             default: '100%',
             type: String | Number
         },
-        height: String | Number
+        height: String | Number,
+        location: {
+            default: 'top',
+            type: String
+        }
     },
     data() {
         return {
+        }
+    },
+    computed: {
+        sirStyle() {
+            return {
+                width: this.width,
+                height: this.height
+            }
+        },
+        sirClass() {
+            return {
+                card: true,
+                cartop: true
+            }
         }
     },
     created() {
@@ -43,6 +61,7 @@ export default {
         }
     }
     .cardBlockFotter {
+        width: 100%;
         .cardTitle {
             margin: 12px;
             height: 20px;
@@ -54,11 +73,22 @@ export default {
             a {
                 display: inline-block;
                 height: 20px;
-                line-height: 20px;    
+                line-height: 20px;
                 text-align: center;
                 font-size: 14px;
             }
         }
+    }
+}
+
+.cartop {
+    display: flex; 
+    // justify-content:space-between;
+    .cardBlockHeader {
+        width: 50%;
+    }
+    .cardBlockFotter {
+        width: 50%;
     }
 }
 </style>

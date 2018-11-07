@@ -1,5 +1,5 @@
 <template>
-    <div :class="{navment:true,sirTop:sirTop}" :style="{width:width,height:height,lineHeight:height}">
+    <div :class="{navment:true,sirTop:sirTop}" :style="sirColor">
         <div class="navtop">
             <slot name="navtop"></slot>
         </div>
@@ -15,11 +15,25 @@ export default {
         height: {
             type: String | Number,
             default: '70px'
+        },
+        color: {
+            type: String,
+            default: 'rgba(66, 139, 202, 1)'
         }
     },
     data() {
         return {
-            sirTop: false
+            sirTop: false,
+        }
+    },
+    computed: {
+        sirColor() {
+            return {
+                width: this.width, 
+                height: this.height,
+                lineHeight: this.height,
+                background:this.color
+            }
         }
     },
     methods: {
@@ -43,6 +57,7 @@ export default {
     top: 0;
     width: 100%;
     transition: all 0.5s ease;
+    z-index: 10;
     &:hover {
         background: #fff;
     }
@@ -61,7 +76,8 @@ export default {
         float: right;
     }
 }
-.sirTop{
+
+.sirTop {
     background: #fff;
 }
 </style>

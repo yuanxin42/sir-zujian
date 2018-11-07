@@ -53,6 +53,7 @@ export default {
     position: fixed;
     right: 0px;
     top: -500px;
+    z-index: 9;
     transition: all 0.5s ease;
     .scrollA {
         .scrollPic {

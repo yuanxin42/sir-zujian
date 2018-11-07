@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <sir-zj></sir-zj>
+    <sir-scrolltop></sir-scrolltop>
     <sir-navmenu>
       <div slot="navtop">
-        123123
+         123123 
       </div>
       <div slot="allsubmenu">
         <sir-submenu>123</sir-submenu>
@@ -11,7 +12,7 @@
         <sir-submenu>123</sir-submenu>
       </div>
     </sir-navmenu>
-    <sir-card width='400px'>
+    <sir-card width='400px' location='top' >
       <div slot="cardHeader">
         <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
       </div>
@@ -24,8 +25,8 @@
         </div>
       </div>
     </sir-card>
-    </br>
-    <div class="demo">
+    <!-- </br> -->
+    <!-- <div class="demo">
       <sir-codecard>
         <div slot="cardHeader">
           <sir-tabs labelwidth='200px'>
@@ -37,7 +38,7 @@
         <div slot="cardFotter">
         </div>
       </sir-codecard>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -56,6 +57,7 @@ export default {
 <style>
 #app {
   height: 2000px;
+  padding-top: 60px;
   /* background: powderblue; */
 }
 
