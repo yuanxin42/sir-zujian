@@ -12,7 +12,20 @@
         <sir-submenu>123</sir-submenu>
       </div>
     </sir-navmenu>
-    <sir-card width='400px' location='top' >
+     <sir-card width='400px' location='top'>
+      <div slot="cardHeader">
+        <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
+      </div>
+      <div slot="cardFotter">
+        <div class="cardTitle">
+          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+        </div>
+        <div class="cardTitle">
+          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
+        </div>
+      </div>
+    </sir-card>
+    <sir-card width='400px' location='right' >
       <div slot="cardHeader">
         <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
       </div>

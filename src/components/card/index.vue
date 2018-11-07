@@ -35,7 +35,8 @@ export default {
         sirClass() {
             return {
                 card: true,
-                carLocationLeft: this.location =='left'
+                carLocationLeft: this.location =='left',
+                carLocationRight: this.location =='right'
             }
         }
     },
@@ -89,6 +90,16 @@ export default {
     }
     .cardBlockFotter {
         width: 50%;
+    }
+}
+.carLocationRight{
+    .cardBlockHeader {
+        width: 50%;
+        float: right;
+    }
+    .cardBlockFotter {
+        width: 50%;
+        float: left;
     }
 }
 </style>
