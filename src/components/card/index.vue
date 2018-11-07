@@ -35,7 +35,7 @@ export default {
         sirClass() {
             return {
                 card: true,
-                cartop: true
+                carLocationLeft: this.location =='left'
             }
         }
     },
@@ -81,7 +81,7 @@ export default {
     }
 }
 
-.cartop {
+.carLocationLeft {
     display: flex; 
     // justify-content:space-between;
     .cardBlockHeader {
