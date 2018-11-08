@@ -1,6 +1,7 @@
 <template>
-    <li class="submenu" :style="{width:width,height:height,lineHeight:height}">
+    <li class="submenu" :style="sirStyle" @mouseenter="sirenter" @mouseleave="sirleave">
         <slot></slot>
+        <div class="submenuAfter" :style="{background:color}"></div>
     </li>
 </template>
 <script>
@@ -13,10 +14,33 @@ export default {
         height: {
             default: 'auto',
             type: String | Number
+        },
+        color: {
+            default: '#fe9600',
+            type: String
+        }
+    },
+    computed: {
+        sirStyle() {
+            return {
+                width: this.width,
+                height: this.height,
+                lineHeight: this.height,
+                color: this.sircolor
+            }
+        }
+    },
+    methods:{
+        sirenter(){
+            this.sircolor = this.color
+        },
+        sirleave(){
+            this.sircolor = '#666'
         }
     },
     data() {
         return {
+            sircolor:'#666'
         }
     },
     created() {
@@ -24,9 +48,10 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-p{
+p {
     background: red;
 }
+
 .submenu {
     float: left;
     margin-right: 10px;
@@ -34,19 +59,17 @@ p{
     position: relative;
     overflow: hidden;
     &:hover {
-        background: #fff;
-        &:after{
+        .submenuAfter{
             left: 0;
         }
     }
-    &:after {
+    .submenuAfter {
         content: "";
         display: block;
         position: absolute;
         bottom: 0px;
-        left: -100%;
+        left: -105%;
         height: 6px;
-        background: #fe9600;
         width: 100%;
         transition: all 0.5s ease;
     }

@@ -1,5 +1,5 @@
 <template>
-    <div :class="{navment:true,sirTop:sirTop}" :style="sirColor">
+    <div :class="sirClass" :style="sirColor" @mouseenter="sirenter" @mouseleave="sirleave">
         <div class="navtop">
             <slot name="navtop"></slot>
         </div>
@@ -24,15 +24,22 @@ export default {
     data() {
         return {
             sirTop: false,
+            sirbac: 'transparent'
         }
     },
     computed: {
         sirColor() {
             return {
-                width: this.width, 
+                width: this.width,
                 height: this.height,
                 lineHeight: this.height,
-                background:this.color
+                background: this.sirbac
+            }
+        },
+        sirClass() {
+            return {
+                navment: true,
+                sirTop: this.sirTop
             }
         }
     },
@@ -41,9 +48,17 @@ export default {
             let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
             if (scroll > 0) {
                 this.sirTop = true;
+                this.sirbac = this.color
             } else {
                 this.sirTop = false;
+                this.sirbac = 'transparent'
             }
+        },
+        sirenter() {
+            this.sirbac = this.color
+        },
+        sirleave() {
+            this.sirbac = 'transparent'
         }
     },
     created() {
@@ -58,9 +73,6 @@ export default {
     width: 100%;
     transition: all 0.5s ease;
     z-index: 10;
-    &:hover {
-        background: #fff;
-    }
     .navtop {
         float: left;
         margin-left: 20px;
@@ -75,9 +87,5 @@ export default {
         margin-right: 20px;
         float: right;
     }
-}
-
-.sirTop {
-    background: #fff;
 }
 </style>

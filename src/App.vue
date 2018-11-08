@@ -1,57 +1,21 @@
 <template>
   <div id="app">
-    <sir-zj></sir-zj>
     <sir-scrolltop></sir-scrolltop>
+    <sir-carousel>
+        <img src="./assets/image/t01a83ee242957a054f.png" alt="">
+        <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
+        <img src="./assets/image/t01e7d89615e1846abe.jpg" alt="">
+    </sir-carousel>
     <sir-navmenu>
       <div slot="navtop">
-         123123 
+         首页 
       </div>
       <div slot="allsubmenu">
-        <sir-submenu>123</sir-submenu>
-        <sir-submenu>123</sir-submenu>
-        <sir-submenu>123</sir-submenu>
+        <sir-submenu>标题1</sir-submenu>
+        <sir-submenu>标题2</sir-submenu>
+        <sir-submenu>标题3</sir-submenu>
       </div>
     </sir-navmenu>
-     <sir-card width='400px' location='top'>
-      <div slot="cardHeader">
-        <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
-      </div>
-      <div slot="cardFotter">
-        <div class="cardTitle">
-          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-        </div>
-        <div class="cardTitle">
-          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-        </div>
-      </div>
-    </sir-card>
-    <sir-card width='400px' location='right' >
-      <div slot="cardHeader">
-        <img class="cardHover" src="./assets/image/t01b68886e4ba7bb7c5.png" alt="">
-      </div>
-      <div slot="cardFotter">
-        <div class="cardTitle">
-          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-        </div>
-        <div class="cardTitle">
-          <a href="http://www.360.cn/n/10274.html">360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股360公司于上交所敲锣 成功回归A股</a>
-        </div>
-      </div>
-    </sir-card>
-    <!-- </br> -->
-    <!-- <div class="demo">
-      <sir-codecard>
-        <div slot="cardHeader">
-          <sir-tabs labelwidth='200px'>
-            <sir-tab label="用户管理阿斯顿撒打算" name="first1">我是tab11</sir-tab>
-            <sir-tab label="用户管2" name="first2">我是tab2</sir-tab>
-            <sir-tab label="用户管理33" name="first3">我是tab33</sir-tab>
-          </sir-tabs>
-        </div>
-        <div slot="cardFotter">
-        </div>
-      </sir-codecard>
-    </div> -->
   </div>
 </template>
 
