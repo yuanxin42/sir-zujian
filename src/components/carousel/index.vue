@@ -1,5 +1,5 @@
 <template>
-  <div class="aside" :style="sirStyle">
+  <div class="carousel" :style="sirStyle">
     我是那个要实现的轮播图
     <slot></slot>
   </div>
@@ -7,8 +7,14 @@
 <script>
 export default {
   props: {
-    width: String | Number,
-    height: String | Number
+    width: {
+      type: String | Number,
+      default: '100%',
+    },
+    height: {
+      type: String | Number,
+      default: '100%',
+    }
   },
   computed: {
     sirStyle() {
@@ -20,11 +26,23 @@ export default {
   },
   data() {
     return {
+      carousel:[]
     }
   },
   created() {
+  },
+  mounted() {
+    this.$children.forEach((vm) => {
+      if (vm.$options.name === 'sir-carouselItem') {
+        console.log(vm, '看看是个啥')
+        this.carousel.push(vm)
+      }
+    })
   }
 }
 </script>
 <style lang="less" scoped>
+  .carousel{
+    position: relative;
+  }
 </style>

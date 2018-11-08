@@ -28,7 +28,6 @@ export default {
         // this.isname = this.$parent.tabname
         this.eventBus.$on('update:selected', (vm) => {
             this.isname = vm;
-            console.log(vm, '我是那个bus')
         })
     },
     created() {
