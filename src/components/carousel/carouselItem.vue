@@ -14,15 +14,15 @@ export default {
         height: {
             default: '100%',
             type: String | Number
-        },
-        src: String,
-        alt: String
+        }
     },
     computed: {
         sirStyle() {
             return {
                 width: this.width,
                 height: this.height,
+                opacity: this.isopacity,
+                transition: `all ${this.seconds}s ease`
             }
         }
     },
@@ -30,20 +30,29 @@ export default {
     },
     data() {
         return {
-            carouselItem:'123'
+            carouselItem: '123',
+            isopacity: 1,
+            seconds: '1.5'
         }
     },
     created() {
+        if (this.$parent.$props.time) {
+            this.seconds = this.$parent.$props.time / 1000
+            console.log(this.$parent.$props.time, 'this.$parents')
+        } else {
+            console.log('组件使用不正确')
+        }
+
     }
 }
 </script>
 <style lang="less" scoped>
-    .sir-carouselItem{
-        position: absolute;
-        img{
-            width: 100%;
-            height: 100%;
-        }
-        overflow: hidden;
+.sir-carouselItem {
+    position: absolute;
+    img {
+        width: 100%;
+        height: 100%;
     }
+    overflow: hidden;
+}
 </style>
