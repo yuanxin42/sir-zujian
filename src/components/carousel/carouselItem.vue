@@ -22,7 +22,8 @@ export default {
                 width: this.width,
                 height: this.height,
                 opacity: this.isopacity,
-                transition: `all ${this.seconds}s ease`
+                transition: `all ${this.seconds}s ease`,
+                zIndex: this.zIndex
             }
         }
     },
@@ -32,7 +33,8 @@ export default {
         return {
             carouselItem: '123',
             isopacity: 1,
-            seconds: '1.5'
+            seconds: '1.5',
+            zIndex: '0'
         }
     },
     created() {

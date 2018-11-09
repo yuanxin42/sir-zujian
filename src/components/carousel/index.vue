@@ -3,7 +3,7 @@
     我是那个要实现的轮播图
     <slot></slot>
     <ul class="childitems">
-      <li class="childitem" v-for="(val,index) in carousel" :key="index">22</li>
+      <li class="childitem" v-for="(val,index) in carousel" :key="index"></li>
     </ul>
   </div>
 </template>
@@ -81,5 +81,22 @@ export default {
 .carousel {
   position: relative;
   overflow: hidden; // background: red;
+  .childitems{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    .childitem{
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+      float: left;
+      margin-right: 20px;
+    }
+  }
+}
+li{
+  list-style: none;
 }
 </style>
