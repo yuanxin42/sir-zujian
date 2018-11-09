@@ -3,8 +3,10 @@
     我是那个要实现的轮播图
     <slot></slot>
     <ul class="childitems">
-      <li class="childitem" v-for="(val,index) in carousel" :key="index"></li>
+      <li :class="{childitem:true,showItem:index==isshow}" v-for="(val,index) in carousel" :key="index"></li>
     </ul>
+    <div class="carouselBtn leftBtn"><span class="font">&lt;</span></div>
+    <div class="carouselBtn rightBtn"><span class="font">&gt;</span></div>
   </div>
 </template>
 <script>
@@ -89,11 +91,39 @@ export default {
     .childitem{
       width: 20px;
       height: 20px;
-      background: red;
+      background: #fff;
       border-radius: 50%;
       float: left;
       margin-right: 20px;
     }
+    .showItem{
+      background: orange;
+    }
+  }
+  .carouselBtn{
+    width: 5%;
+    height: 20%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    .font{
+      position: absolute;
+      font-size: 300%;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+  .leftBtn{
+    left: 2%;
+  }
+  .rightBtn{
+    left: auto;
+    right: 2%;
   }
 }
 li{
