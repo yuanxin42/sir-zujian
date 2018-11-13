@@ -5,13 +5,17 @@
     <ul class="childitems">
       <li :class="{childitem:true,showItem:index==isshow}" v-for="(val,index) in carousel" :key="index"></li>
     </ul>
-    <div class="carouselBtn leftBtn"><span class="font">&lt;</span></div>
-    <div class="carouselBtn rightBtn"><span class="font">&gt;</span></div>
+    <div class="carouselBtn leftBtn">
+      <span class="font">&lt;</span>
+    </div>
+    <div class="carouselBtn rightBtn">
+      <span class="font">&gt;</span>
+    </div>
   </div>
 </template>
 <script>
 export default {
-  name:'carousel',
+  name: 'carousel',
   props: {
     width: {
       type: String | Number,
@@ -83,12 +87,12 @@ export default {
 .carousel {
   position: relative;
   overflow: hidden; // background: red;
-  .childitems{
+  .childitems {
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    .childitem{
+    .childitem {
       width: 20px;
       height: 20px;
       background: #fff;
@@ -96,11 +100,11 @@ export default {
       float: left;
       margin-right: 20px;
     }
-    .showItem{
+    .showItem {
       background: orange;
     }
   }
-  .carouselBtn{
+  .carouselBtn {
     width: 5%;
     height: 20%;
     background: rgba(0, 0, 0, 0.7);
@@ -110,23 +114,23 @@ export default {
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
-    .font{
-      position: absolute;
+    display: flex;
+    align-items: center;
+    .font {
       font-size: 300%;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      background: red; // top: 50%;
     }
   }
-  .leftBtn{
+  .leftBtn {
     left: 2%;
   }
-  .rightBtn{
+  .rightBtn {
     left: auto;
     right: 2%;
   }
 }
-li{
+
+li {
   list-style: none;
 }
 </style>
