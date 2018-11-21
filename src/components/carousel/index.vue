@@ -1,15 +1,14 @@
 <template>
-  <div class="carousel" :style="sirStyle">
-    我是那个要实现的轮播图
+  <div class="carousel" @mouseenter="enter()" @mouseleave="leave()" :style="sirStyle">
     <slot></slot>
     <ul class="childitems">
       <li :class="{childitem:true,showItem:index==isshow}" v-for="(val,index) in carousel" :key="index"></li>
     </ul>
     <div class="carouselBtn leftBtn">
-      <span class="font">&lt;</span>
+      <span class="font" @click="runLeft">&lt;</span>
     </div>
     <div class="carouselBtn rightBtn">
-      <span class="font">&gt;</span>
+      <span class="font" @click="runRight">&gt;</span>
     </div>
   </div>
 </template>
@@ -57,10 +56,13 @@ export default {
           this.carousel.push(vm)
         }
       })
-      this.isshow++
     },
     toRun() {
       this.timer = setInterval(() => {
+        this.isshow++
+        if (this.isshow >= this.carousel.length) {
+          this.isshow = 0
+        }
         this.carousel.forEach((val, index) => {
           if (index === this.isshow) {
             val.isopacity = '1'
@@ -68,11 +70,39 @@ export default {
             val.isopacity = '0'
           }
         })
+      }, this.time)
+    },
+    enter() {
+      clearInterval(this.timer)
+    },
+    leave() {
+      this.toRun()
+    },
+    runRight() {
         this.isshow++
         if (this.isshow >= this.carousel.length) {
           this.isshow = 0
         }
-      }, this.time)
+        this.carousel.forEach((val, index) => {
+          if (index === this.isshow) {
+            val.isopacity = '1'
+          } else {
+            val.isopacity = '0'
+          }
+        })
+    },
+    runLeft() {
+      this.isshow--
+        if (this.isshow < 0) {
+          this.isshow = this.carousel.length-1
+        }
+        this.carousel.forEach((val, index) => {
+          if (index === this.isshow) {
+            val.isopacity = '1'
+          } else {
+            val.isopacity = '0'
+          }
+        })
     }
   },
   created() {
@@ -86,7 +116,8 @@ export default {
 <style lang="less" scoped>
 .carousel {
   position: relative;
-  overflow: hidden; // background: red;
+  cursor: pointer;
+  overflow: hidden;
   .childitems {
     position: absolute;
     bottom: 20px;
@@ -117,8 +148,8 @@ export default {
     display: flex;
     align-items: center;
     .font {
+      user-select:none;
       font-size: 300%;
-      background: red; // top: 50%;
     }
   }
   .leftBtn {
