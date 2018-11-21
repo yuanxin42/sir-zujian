@@ -10,8 +10,18 @@
       </sir-carousel-item>
       <sir-carousel-item>
           <img src="./assets/image/t01e7d89615e1846abe.jpg" alt="">
-      </sir-carousel-item>     
+      </sir-carousel-item>    
+      <sir-carousel-item>
+          <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
+      </sir-carousel-item> 
     </sir-carousel>
+    <sir-timeline></sir-timeline>
+
+
+
+
+
+
     <sir-navmenu>
       <div slot="navtop">
          首页 
