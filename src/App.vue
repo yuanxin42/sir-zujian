@@ -1,30 +1,25 @@
 <template>
   <div id="app">
     <sir-scrolltop></sir-scrolltop>
-    <sir-carousel width='700px' height = '400px'>
+    <sir-carousel width='700px' height='400px'>
       <sir-carousel-item>
-          <img src="./assets/image/t01a83ee242957a054f.png" alt="">
+        <img src="./assets/image/t01a83ee242957a054f.png" alt="">
       </sir-carousel-item>
       <sir-carousel-item>
-          <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
+        <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
       </sir-carousel-item>
       <sir-carousel-item>
-          <img src="./assets/image/t01e7d89615e1846abe.jpg" alt="">
-      </sir-carousel-item>    
+        <img src="./assets/image/t01e7d89615e1846abe.jpg" alt="">
+      </sir-carousel-item>
       <sir-carousel-item>
-          <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
-      </sir-carousel-item> 
+        <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
+      </sir-carousel-item>
     </sir-carousel>
     <sir-timeline></sir-timeline>
 
-
-
-
-
-
-    <sir-navmenu>
+    <sir-navmenu :issetlocation='false'>
       <div slot="navtop">
-         首页 
+        首页
       </div>
       <div slot="allsubmenu">
         <sir-submenu>标题1</sir-submenu>

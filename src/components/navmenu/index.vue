@@ -16,15 +16,27 @@ export default {
             type: String | Number,
             default: '70px'
         },
-        color: {
+        sirbac: {  //  默认的导航菜单背景
+            type: String,
+            default: '#267439'
+        },
+        declinecolor: { // 下滑和鼠标移入时背景色
             type: String,
             default: 'rgba(66, 139, 202, 1)'
+        },
+        issetlocation: {  // 是否固定顶部
+            type: Boolean,
+            default: true
+        },
+        isdeclinebackground: {  // 鼠标下滑颜色是否改变
+            type: Boolean,
+            default: false
         }
     },
     data() {
         return {
             sirTop: false,
-            sirbac: 'transparent'
+            navmenuBac:''
         }
     },
     computed: {
@@ -33,32 +45,33 @@ export default {
                 width: this.width,
                 height: this.height,
                 lineHeight: this.height,
-                background: this.sirbac
+                background: this.navmenuBac || this.sirbac
             }
         },
         sirClass() {
             return {
                 navment: true,
-                sirTop: this.sirTop
+                sirTop: this.sirTop,
+                islocation: this.issetlocation
             }
         }
     },
     methods: {
         handleScroll() {
             let scroll = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop
-            if (scroll > 0) {
+            if (scroll > 0 && this.isdeclinebackground) {
                 this.sirTop = true;
-                this.sirbac = this.color
+                this.navmenuBac = this.declinecolor
             } else {
                 this.sirTop = false;
-                this.sirbac = 'transparent'
+                this.navmenuBac = this.sirbac
             }
         },
         sirenter() {
-            this.sirbac = this.color
+            this.navmenuBac = this.declinecolor
         },
         sirleave() {
-            this.sirbac = 'transparent'
+            this.navmenuBac = this.sirbac
         }
     },
     created() {
@@ -68,11 +81,8 @@ export default {
 </script>
 <style lang="less" scoped>
 .navment {
-    position: fixed;
-    top: 0;
     width: 100%;
     transition: all 0.5s ease;
-    z-index: 10;
     .navtop {
         float: left;
         margin-left: 20px;
@@ -87,5 +97,11 @@ export default {
         margin-right: 20px;
         float: right;
     }
+}
+
+.islocation {
+    position: fixed;
+    top: 0;
+    z-index: 10;
 }
 </style>
