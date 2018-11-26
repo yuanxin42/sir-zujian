@@ -1,5 +1,15 @@
 <template>
   <div id="app">
+    <sir-navmenu sirbac='#fff' :issetlocation='false'>
+      <div slot="navtop">
+        首页
+      </div>
+      <div slot="allsubmenu">
+        <sir-submenu>标题1</sir-submenu>
+        <sir-submenu>标题2</sir-submenu>
+        <sir-submenu>标题3</sir-submenu>
+      </div>
+    </sir-navmenu>
     <sir-scrolltop></sir-scrolltop>
     <sir-carousel width='700px' height='400px'>
       <sir-carousel-item>
@@ -15,18 +25,18 @@
         <img src="./assets/image/t016fed337a2131cd83.jpg" alt="">
       </sir-carousel-item>
     </sir-carousel>
-    <sir-timeline></sir-timeline>
-
-    <sir-navmenu :issetlocation='false'>
-      <div slot="navtop">
-        首页
-      </div>
-      <div slot="allsubmenu">
-        <sir-submenu>标题1</sir-submenu>
-        <sir-submenu>标题2</sir-submenu>
-        <sir-submenu>标题3</sir-submenu>
-      </div>
-    </sir-navmenu>
+    <sir-timeline>
+      <sir-timelineTree>
+        <sir-timelineItem>4444</sir-timelineItem>
+        <sir-timelineItem>4444</sir-timelineItem>
+        <sir-timelineItem>4444</sir-timelineItem>
+      </sir-timelineTree>
+      <sir-timelineTree>
+        <sir-timelineItem>555</sir-timelineItem>
+        <sir-timelineItem>555</sir-timelineItem>
+        <sir-timelineItem>555</sir-timelineItem>
+      </sir-timelineTree>
+    </sir-timeline>
   </div>
 </template>
 
@@ -45,7 +55,6 @@ export default {
 <style>
 #app {
   height: 2000px;
-  padding-top: 60px;
   /* background: powderblue; */
 }
 

@@ -4,9 +4,13 @@
 
 > 不断维护版本迭代中
 
+> 组件库访问 : http://yyyxxxxin.top/dist/#/package
+
 ### 项目特点
 1. 参考现在社区比较成熟如ElementUI，Ant Design，Material UI这些UI轮子的API设计和样式布局。
 2. 该项目基于Vue2.x版本来开发和使用
+3. 如果您访问了我的组件库地址，并问我为什么不用GitBook或者VuePress去写这个组件文档？emmmm...因为那时候还不知道这些东西
+4. 有独特的style补充第三条，哈哈！
 
 ## Build Setup
 

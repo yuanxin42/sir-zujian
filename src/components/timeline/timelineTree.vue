@@ -1,8 +1,12 @@
 <template>
-    <div class="timeline" :style="{width:width,height:height}">
-        <h5>{{title}}</h5>
-        <slot></slot>
-    </div>
+        <ul :style="{width:width,height:height}" class="timelineTree">
+            <li class="timelineItem">
+                <span class="bigCircle">
+                    <span class="bigCircleChildren"></span>
+                </span>
+            </li>
+            <slot></slot>
+        </ul>
 </template>
 <script>
 export default {
@@ -33,8 +37,7 @@ export default {
     height: 20px;
     text-align: center;
     line-height: 21px;
-    box-shadow: 2px 1px #888888;
-    left: -10px;
+    left: -9px;
     border: 1px solid #ccc;
     .mixinCircle();
     .bigCircleChildren {
@@ -63,26 +66,10 @@ export default {
         padding-left: 20px;
         min-height: 30px;
     }
-    .smallCircle ,.bigCircle{
+    .bigCircle{
         position: absolute;
         background: #fff;
         z-index: 1;
-    }
-    .smallCircle {
-        width: 14px;
-        height: 14px;
-        text-align: center;
-        line-height: 13px;
-        box-shadow: 1px 1px 1px 1px #888888;
-        left: -6.5px;
-        border: 1px solid #ccc;
-        .mixinCircle();
-        .smallCircleChildren {
-            width: 10px;
-            height: 10px;
-            .mixinCircle();
-            background: #00bbff;
-        }
     }
 }
 </style>

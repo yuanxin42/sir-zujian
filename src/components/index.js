@@ -14,6 +14,8 @@ import navmenu from './navmenu/index'
 import submenu from './navmenu/submenu'
 import codecard from './codecard/index'
 import timeline from './timeline/index'
+import timelineTree from './timeline/timelineTree'
+import timelineItem from './timeline/timelineItem'
 
 export default {
   install: (Vue) => {
@@ -33,5 +35,7 @@ export default {
     Vue.component('sir-submenu', submenu)
     Vue.component('sir-codecard', codecard)  
     Vue.component('sir-timeline', timeline)
+    Vue.component('sir-timelineTree', timelineTree)
+    Vue.component('sir-timelineItem', timelineItem)
   }
 }
