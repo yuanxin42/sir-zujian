@@ -26,7 +26,7 @@
       </sir-carousel-item>
     </sir-carousel>
     <sir-timeline>
-      <sir-timelineTree>
+      <sir-timelineTree title='时间轴:'>
         <sir-timelineItem>4444</sir-timelineItem>
         <sir-timelineItem>4444</sir-timelineItem>
         <sir-timelineItem>4444</sir-timelineItem>

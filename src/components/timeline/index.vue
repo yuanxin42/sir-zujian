@@ -7,8 +7,14 @@
 <script>
 export default {
     props: {
-        width: String | Number,
-        height: String | Number,
+        width: {
+            default: 'auto',
+            type: String | Number
+        },
+        height: {
+            default: 'auto',
+            type: String | Number
+        },
         title: {
             default: '时间轴',
             type: String | Number
@@ -23,66 +29,4 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-.mixinCircle() {
-    display: inline-block;
-    border-radius: 50%;
-}
-
-.bigCircle {
-    width: 20px;
-    height: 20px;
-    text-align: center;
-    line-height: 21px;
-    box-shadow: 2px 1px #888888;
-    left: -10px;
-    border: 1px solid #ccc;
-    .mixinCircle();
-    .bigCircleChildren {
-        width: 13px;
-        height: 13px;
-        .mixinCircle();
-        background: #00bbff;
-    }
-}
-
-
-.timelineTree {
-    list-style: none;
-    margin: 0;
-    .timelineItem:after {
-        position: absolute;
-        left: 0;
-        background: #00bbff;
-        width: 4px;
-        height: 100%;
-        content: "";
-        top: 0px;
-    }
-    .timelineItem {
-        position: relative;
-        padding-left: 20px;
-        min-height: 30px;
-    }
-    .smallCircle ,.bigCircle{
-        position: absolute;
-        background: #fff;
-        z-index: 1;
-    }
-    .smallCircle {
-        width: 14px;
-        height: 14px;
-        text-align: center;
-        line-height: 13px;
-        box-shadow: 1px 1px 1px 1px #888888;
-        left: -6.5px;
-        border: 1px solid #ccc;
-        .mixinCircle();
-        .smallCircleChildren {
-            width: 10px;
-            height: 10px;
-            .mixinCircle();
-            background: #00bbff;
-        }
-    }
-}
 </style>
