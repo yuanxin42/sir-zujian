@@ -1,10 +1,15 @@
 {
   "name": "sirpackages",
-  "description": "A Vue.js project",
-  "version": "1.0.0",
+  "description": "一个vue组件库",
+  "version": "1.1.6",
   "author": "原鑫 <1017123610@qq.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
+  "main": "dist/sir.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanxin666/sir-zujian.git"
+  },
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
