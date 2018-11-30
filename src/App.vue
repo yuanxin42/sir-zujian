@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<!--111  -->
     <sir-navmenu sirbac='#fff' :issetlocation='false'>
       <div slot="navtop">
         首页
