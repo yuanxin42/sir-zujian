@@ -1,11 +1,11 @@
 <template>
     <div class="timeline" :style="{width:width,height:height}">
-        <h5>{{title}}</h5>
         <slot></slot>
     </div>
 </template>
 <script>
 export default {
+    name:'timeline',
     props: {
         width: {
             default: 'auto',
@@ -18,7 +18,11 @@ export default {
         title: {
             default: '时间轴',
             type: String | Number
-        }
+        },
+        titlewidth: {
+            default: '60px',
+            type: String | Number
+        },
     },
     data() {
         return {
@@ -29,4 +33,5 @@ export default {
 }
 </script>
 <style lang="less" scoped>
+
 </style>

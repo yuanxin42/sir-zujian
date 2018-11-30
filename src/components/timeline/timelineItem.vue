@@ -10,11 +10,7 @@
 export default {
     props: {
         width: String | Number,
-        height: String | Number,
-        title: {
-            default: '时间轴',
-            type: String | Number
-        }
+        height: String | Number
     },
     data() {
         return {

@@ -1,6 +1,7 @@
 <template>
     <div class="sirTimelineTree">
-        <div class="timelineTitle" :style="{width:titlewidth}">{{title}}&nbsp</div>
+        <span class="timelineTitle" :style="{width:titleParentWidth}">{{title}}&nbsp</span>
+        <!-- 因为没给它设置高度，也不知道设置多少合适，索性让一个空格撑起来把  -->
         <ul :style="{width:width,height:height}" class="timelineTree">
             <li class="timelineItem">
                 <span class="bigCircle">
@@ -16,13 +17,14 @@ export default {
     props: {
         width: String | Number,
         height: String | Number,
-        titlewidth: {
-            default: '60px',
-            type: String | Number
-        },
         title: {
             default: '',
             type: String | Number
+        }
+    },
+    computed: {
+        titleParentWidth() {
+            return this.$parent.titlewidth
         }
     },
     data() {
@@ -30,6 +32,7 @@ export default {
         }
     },
     created() {
+        console.log(this.$options.name, '我是它的父级啊')
     }
 }
 </script>
@@ -59,6 +62,9 @@ export default {
     .timelineTitle {
         display: block;
         float: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .timelineTree {
