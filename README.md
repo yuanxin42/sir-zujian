@@ -4,7 +4,7 @@
 
 > 不断维护版本迭代中
 
-> 组件库访问 : http://yyyxxxxin.top/sir
+> 组件库api访问 : http://yyyxxxxin.top/sir
 
 > 基于组件库开发的博客 : http://yyyxxxxin.top/myblog
 
