@@ -4,7 +4,9 @@
 
 > 不断维护版本迭代中
 
-> 组件库访问 : http://yyyxxxxin.top/dist/#/package
+> 组件库访问 : http://yyyxxxxin.top/sir
+
+> 基于组件库开发的博客 : http://yyyxxxxin.top/myblog
 
 ### 项目特点
 1. 参考现在社区比较成熟如ElementUI，Ant Design，Material UI这些UI轮子的API设计和样式布局。
