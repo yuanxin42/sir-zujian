@@ -4,9 +4,9 @@
 
 > 不断维护版本迭代中
 
-> 组件库api访问 : http://yyyxxxxin.top/sir
+> 组件库api访问 : http://yyyxxxxin.top/sir（服务到期）
 
-> 基于组件库开发的博客 : http://yyyxxxxin.top/myblog
+> 基于组件库开发的博客 : http://yyyxxxxin.top/myblog（服务到期）
 
 ### 项目特点
 1. 参考现在社区比较成熟如ElementUI，Ant Design，Material UI这些UI轮子的API设计和样式布局。
@@ -22,11 +22,13 @@ npm install sirpackages
 
 ```
 ### 支持组件（持续更新研发中。。。。）
-1. contain布局
+1. contain布局（sir-header/sir-footer/sir-main/sir-aside）
 2. card卡片
-3. navmenu导航菜单
-4. scrolltop滚动条
-5. tabs选项卡
+3. navmenu导航菜单 (sir-navmenu/sir-submenu)
+4. scrolltop 跳转头部滚动条 
+5. tabs选项卡 (sir-tabs/sir-tab)
+6. timeline 时间轴 (sir-timeline/sir-timelineItem/sir-timelineTree)
+7. carousel 轮播图 (开发中)
 
 ### https://github.com/yuanxin666/sir-zujian 感兴趣给个Star，感激不尽！
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
